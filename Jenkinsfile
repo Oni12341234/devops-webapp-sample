@@ -17,7 +17,8 @@ pipeline {
                     sh'mvn test'
                 }
             }
-        stage('Build')
+        }
+        stage('Compile'){
             steps {
                 script{
                     sh'mvn -B package'
