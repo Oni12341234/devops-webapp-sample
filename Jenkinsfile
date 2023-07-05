@@ -11,6 +11,21 @@ pipeline {
                 }
             }
         }
+        stage('Test'){
+            steps {
+                script{
+                    sh'mvn test'
+                }
+            }
+        stage('Build')
+            steps {
+                script{
+                    sh'mvn -B package'
+                }
+
+            }
+
+        }
         stage('Build') {
             steps {
                 script{
