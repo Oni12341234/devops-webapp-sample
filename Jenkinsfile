@@ -14,14 +14,14 @@ pipeline {
         stage('Test'){
             steps {
                 script{
-                    sh'mvn test'
+                    sh'/usr/local/bin/mvn test'
                 }
             }
         }
         stage('Compile'){
             steps {
                 script{
-                    sh'mvn -B package'
+                    sh'/usr/local/bin/mvn -B package'
                 }
 
             }
